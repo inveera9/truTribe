@@ -3,8 +3,6 @@ GIT
   revision: 14356d7eccb9175819508d243fb4a92681d11208
   specs:
     paperclip (4.2.1)
-      activemodel (>= 4.0.0)
-      activesupport (>= 3.0.0)
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (= 0.3.0)
