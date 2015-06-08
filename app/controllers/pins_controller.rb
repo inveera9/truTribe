@@ -5,8 +5,12 @@ class PinsController < ApplicationController
   respond_to :html
 
   def index
+    if params[:tag]
+    @pins = Pin.tagged_with(params[:tag]).order("created_at DESC").paginate(:page => params[:page], :per_page => 8)
+    else
     @pins = Pin.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 8)
     respond_with(@pins)
+    end
   end
 
   def show
@@ -48,6 +52,10 @@ class PinsController < ApplicationController
     end
 
     def pin_params
-      params.require(:pin).permit(:description, :image)
+      params.require(:pin).permit(:description, :image, :tag_list)
     end
+
+    
 end
+
+

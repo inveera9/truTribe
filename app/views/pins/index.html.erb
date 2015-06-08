@@ -22,10 +22,16 @@
               
             </div>
           <% end %>
+          
+          <div>
+            <p>Tags:  <%= raw pin.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
+          </div>
       </div>
     </div> 
   <% end %>
 </div>
 <div class="center">
 <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
-</div>
+</div
+                           
+                            
