@@ -4,10 +4,10 @@
   <% @pins.each do |pin| %>
     <div class="box panel panel-default">
       <%= link_to image_tag(pin.image.url(:medium)), pin %>
-      <div class="panel-body" padding: 7px>
-        <p><%= pin.description %></p>
-        <%= pin.user.name if pin.user%>
-          <strong><% if pin.user == current_user %></strong>
+      <div class="panel-body" padding: 5px>
+        <span class="desc-font"><%= pin.description %></span><br>
+        <span class="name">- <%= pin.user.name if pin.user%></span>
+          <% if pin.user == current_user %>
             <div class="actions">
                
                 <%= link_to edit_pin_path(pin) do %>
@@ -22,10 +22,9 @@
               
             </div>
           <% end %>
-          
-          <div>
-            <p>Tags:  <%= raw pin.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
-          </div>
+      </div>
+      <div class="panel-footer">
+        Tags:  <%= raw pin.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
       </div>
     </div> 
   <% end %>

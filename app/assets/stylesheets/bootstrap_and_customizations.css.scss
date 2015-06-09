@@ -10,6 +10,8 @@ $brand-primary:			#bdc3c7;
 $jumbotron-bg:			#2c3e50;
 $jumbotron-heading-color:	white;
 $link-color:				red;
+$panel-body-padding:	10px;
+$panel-footer-padding:	5px;
 
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
