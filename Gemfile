@@ -11,6 +11,7 @@ gem 'turbolinks'
 gem 'jquery-turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'devise', '~> 3.5.1'
+gem 'devise_invitable', '~> 1.3.4'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'bootstrap-sass', '~> 3.3.4'
 gem 'paperclip', '~> 4.2'
