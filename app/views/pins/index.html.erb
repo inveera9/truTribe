@@ -1,0 +1,37 @@
+<%= render 'pages/home' unless user_signed_in? %>
+
+<div id="pins" class="transitions-enabled">
+  <% @pins.each do |pin| %>
+    <div class="box panel panel-default">
+      <%= link_to image_tag(pin.image.url(:medium)), pin %>
+      <div class="panel-body" padding: 5px>
+        <span class="desc-font"><%= pin.description %></span><br>
+        <span class="name">- <%= pin.user.name if pin.user%></span>
+          <% if pin.user == current_user %>
+            <div class="actions">
+               
+                <%= link_to edit_pin_path(pin) do %>
+                <span class="glyphicon glyphicon-edit"></span>
+                Edit     
+                <% end %>
+                
+                <%= link_to pin, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                <span class="glyphicon glyphicon-trash"></span> Delete
+                <% end %>
+              
+              
+            </div>
+          <% end %>
+      </div>
+      <div class="panel-footer">
+        Tags:  <%= raw pin.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %><br>
+        
+      </div>
+    </div> 
+  <% end %>
+</div>
+<div class="center">
+<%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
+</div
+                           
+                            
