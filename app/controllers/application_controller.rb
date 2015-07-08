@@ -7,11 +7,7 @@ class ApplicationController < ActionController::Base
 
   protected
 
-<<<<<<< HEAD
     def configure_permitted_parameters
-=======
-	def configure_permitted_parameters
->>>>>>> e977655d6a4fe39b980814bcec520058317f8029
     devise_parameter_sanitizer.for(:sign_up) << :name
     devise_parameter_sanitizer.for(:account_update) << :name
   	end
@@ -19,11 +15,6 @@ class ApplicationController < ActionController::Base
   	def invite_user
   	@user = User.invite!(:email => params[:user][:email], :name => params[:user][:name])
   	render :json => @user
-<<<<<<< HEAD
-    end
-=======
+
 	end
->>>>>>> e977655d6a4fe39b980814bcec520058317f8029
-
-
 end

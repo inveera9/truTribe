@@ -4,11 +4,11 @@ class User < ActiveRecord::Base
   devise :invitable, :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_many :pins
-<<<<<<< HEAD
-  validates :name, presence: true
-  acts_as_commontator
-=======
 
   validates :name, presence: true
->>>>>>> e977655d6a4fe39b980814bcec520058317f8029
+  acts_as_commontator
+
+
+  validates :name, presence: true
+
 end

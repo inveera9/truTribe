@@ -7,17 +7,11 @@ class PinsController < ApplicationController
   def index
     if params[:tag]
     @pins = Pin.tagged_with(params[:tag]).order("created_at DESC").paginate(:page => params[:page], :per_page => 8)
-<<<<<<< HEAD
 
     else
     @pins = Pin.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 8)
     respond_with(@pins)
 
-=======
-    else
-    @pins = Pin.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 8)
-    respond_with(@pins)
->>>>>>> e977655d6a4fe39b980814bcec520058317f8029
     end
   end
 
