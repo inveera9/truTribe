@@ -5,8 +5,12 @@ Rails.application.routes.draw do
   root 'pins#index'
   get 'about' =>'pages#about'
   get 'tags/:tag', to: 'pins#index', as: :tag
+<<<<<<< HEAD
   mount Commontator::Engine => '/commontator'
 
+=======
+  
+>>>>>>> e977655d6a4fe39b980814bcec520058317f8029
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

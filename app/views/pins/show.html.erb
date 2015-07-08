@@ -1,10 +1,15 @@
 <%= link_to 'Back', pins_path %>
 
+<<<<<<< HEAD
 <div class="row">
+=======
+<div clas="row">
+>>>>>>> e977655d6a4fe39b980814bcec520058317f8029
 	<div class="col-md-offset-2 col-md-8">
 		<div class="panel panel-default">
 			<div class="panel-heading center">
 				<%= image_tag @pin.image.url %>
+<<<<<<< HEAD
 			</div>
 			
 			<div class="panel-body">
@@ -33,5 +38,29 @@
 		</div>
 	</div>
 
+=======
+			</div
+				<div class="panel-body">
+					<div class="container">
+						<p><%= @pin.description %></p>        
+						<p><strong><%= @pin.user.name if @pin.user%></strong></p>
+
+							<% if @pin.user == current_user %>
+								<%= link_to edit_pin_path(@pin) do %>
+		        				<span class="glyphicon glyphicon-edit"></span>
+		        				Edit
+		      					<% end %>
+		      					<%= link_to @pin, method: :delete, data: { confirm: 'Are you sure?' } do %>
+		                		<span class="glyphicon glyphicon-trash"></span> Delete
+		                		<% end %>
+		                			
+		                			<p>Tags:  <%= raw @pin.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
+
+      						<% end %>
+					</div>
+				</div>
+		</div>
+	</div>
+>>>>>>> e977655d6a4fe39b980814bcec520058317f8029
 </div>
 

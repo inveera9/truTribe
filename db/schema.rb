@@ -11,6 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20150616221146) do
 
   create_table "commontator_comments", force: true do |t|
@@ -54,6 +55,9 @@ ActiveRecord::Schema.define(version: 20150616221146) do
   end
 
   add_index "commontator_threads", ["commontable_id", "commontable_type"], name: "index_commontator_threads_on_c_id_and_c_type", unique: true
+=======
+ActiveRecord::Schema.define(version: 20150612221416) do
+>>>>>>> e977655d6a4fe39b980814bcec520058317f8029
 
   create_table "pins", force: true do |t|
     t.string   "description"

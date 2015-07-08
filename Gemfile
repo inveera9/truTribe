@@ -20,7 +20,10 @@ gem 'masonry-rails', '~> 0.2.0'
 gem 'will_paginate', '~> 3.0.6'
 gem 'will_paginate-bootstrap'
 gem 'acts-as-taggable-on', '~> 3.4'
+<<<<<<< HEAD
 gem 'commontator', '~> 4.10.0'
+=======
+>>>>>>> e977655d6a4fe39b980814bcec520058317f8029
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 
