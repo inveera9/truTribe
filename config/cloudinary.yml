@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: trutribe
+  api_key: '983695973257928'
+  api_secret: sSQ2qNj4S9iFMZZjJ4W5hOIOfMM
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: trutribe
+  api_key: '983695973257928'
+  api_secret: sSQ2qNj4S9iFMZZjJ4W5hOIOfMM
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: trutribe
+  api_key: '983695973257928'
+  api_secret: sSQ2qNj4S9iFMZZjJ4W5hOIOfMM
+  enhance_image_tag: true
+  static_image_support: false
