@@ -9,6 +9,6 @@ class User < ActiveRecord::Base
   acts_as_commontator
 
 
-  validates :name, presence: true
+ # validates :name, presence: true
 
 end

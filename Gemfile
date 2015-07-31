@@ -23,7 +23,7 @@ gem 'acts-as-taggable-on', '~> 3.4'
 gem 'commontator', '~> 4.10.0'
 gem 'cloudinary'
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
-
+gem 'byebug'
 
 group :development, :test do
      gem 'sqlite3'
